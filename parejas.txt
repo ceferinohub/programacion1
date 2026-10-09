@@ -1,0 +1,5 @@
+Pareja: a (4ta) y b (4ta)
+Pareja: b (4ta) y a (4ta)
+Pareja: a (4ta) y b (4ta)
+Pareja: a (4ta) y b (4ta)
+Pareja: c y a (4ta)

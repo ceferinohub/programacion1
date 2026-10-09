@@ -8,6 +8,20 @@ for i in range(cantidadJugadores):
     print(f"\nDatos del jugador {i+1}:")
     nombres[i] = input("  Nombre: ")
     categorias[i] = input("  Categoría (ej. 4ta, 5ta, 6ta): ")
+    with open("inscriptos.txt", "w") as f:
+        f.write(f"{nombres[i]},{categorias[i]}\n")
+pregunta = input("¿Deseas inscribir otro jugador? (s/n): ")
+if pregunta == "s":
+    cantidadJugadores = int(input("¿Cuántos jugadores vas a agregar? "))
+    nombres = [""] * cantidadJugadores
+    categorias = [""] * cantidadJugadores
+    for i in range(cantidadJugadores):
+        print(f"\nDatos del jugador {i+1}:")
+        nombres[i] = input("  Nombre: ")
+        categorias[i] = input("  Categoría (ej. 4ta, 5ta, 6ta): ")
+    with open("inscriptos.txt", "a") as f:
+        f.write(f"{nombres[i]},{categorias[i]}\n")
+    cantidadJugadores += 1
 
 cantidadParejas = cantidadJugadores // 2
 
@@ -37,3 +51,6 @@ for i in range(cantidadParejas):
 print("\nRESUMEN DEL TORNEO")
 for i in range(cantidadParejas):
     print(f"Pareja '{nombresParejas[i]}': {jugador1Pareja[i]} y {jugador2Pareja[i]}")
+
+
+        
